@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  width: 254px;
+  top: 168px;
+  float: left;
+  width: 256px;
   height: 600px;
+  position: absolute;
   background-color: ${({ theme }) => theme.menuLeft.default};
 `;
 

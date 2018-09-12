@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
   height: 112px;
   display: flex;
   align-items: center;
-  border-left: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+  border-left: 2px solid ${({ theme }) => theme.menuLeft.default};
+  border-bottom: 1px solid ${({ theme }) => theme.menuLeft.default};
 `;
 
 export const Text = styled.span`
