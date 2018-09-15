@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import { ThemeProvider } from 'styled-components';
 import { HelmetProvider } from 'react-helmet-async';
 import { Wrapper, Logo } from './styles';
-import imgLogo from '@/logo/logo.jpg';
+import imgLogo from '@/Images/logo.jpg';
 
 import Menuleft from '@/containers/Menu-left';
 import Header from '@/containers/Header';
