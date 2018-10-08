@@ -3,10 +3,9 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 770px;
   float: right;
-  height: 112px;
+  height: 130px;
   display: flex;
   align-items: center;
-  border-left: 2px solid ${({ theme }) => theme.menuLeft.default};
   border-bottom: 1px solid ${({ theme }) => theme.menuLeft.default};
 `;
 

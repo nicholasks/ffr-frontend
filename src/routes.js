@@ -7,10 +7,16 @@ const Home = Loadable({
   loading: () => 'Loading...',
 });
 
+const Hamburguer = Loadable({
+  loader: () => import('./containers/Hamburguer'),
+  loading: () => 'Loading...',
+});
+
 export default function Routes() {
   return (
     <Router>
       <Home path="/" />
+      <Hamburguer path="/hamburguer" />
     </Router>
   );
 }

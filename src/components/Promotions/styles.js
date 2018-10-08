@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
 `;
 
 export const Title = styled.span`
@@ -10,7 +14,6 @@ export const Title = styled.span`
 `;
 
 export const Image = styled.img`
-  width: 220px;
   height: 170px;
   margin: 10px 0 0 14px;
 `;

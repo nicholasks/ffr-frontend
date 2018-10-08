@@ -1,20 +1,21 @@
 import styled from 'styled-components';
+import { Link } from '@reach/router';
 
 export const Wrapper = styled.div`
-  top: 168px;
+  top: 130px;
   float: left;
   width: 256px;
-  height: 600px;
-  position: absolute;
+  height: 640px;
+  position: fixed;
   background-color: ${({ theme }) => theme.menuLeft.default};
 `;
 
-export const Option = styled.button`
+export const Option = styled(Link)`
   padding: 0;
   border: none;
   opacity: 0.6;
-  outline: none;
   font-size: 28px;
+  text-decoration: none;
   color: ${({ theme }) => theme.menuLeft.white};
   background: ${({ theme }) => theme.menuLeft.default};
 
@@ -29,7 +30,7 @@ export const Option = styled.button`
 
 export const OptionWrapper = styled.div`
   display: flex;
-  padding: 30px 0 0 52px;
+  padding: 30px 0 0 35px;
   flex-direction: column;
   align-items: flex-start;
 `;

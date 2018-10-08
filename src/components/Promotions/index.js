@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { Title, Wrapper, Image, Description, Combo } from './styles';
 
-const Promotions = ({ title, foto, children }) => {
+const Promotions = ({...props, title, foto, children }) => {
   return(
-    <Wrapper>
+    <Wrapper {...props}>
       <Title>{title}</Title>
       <Combo>
         <Image src={foto}/>
