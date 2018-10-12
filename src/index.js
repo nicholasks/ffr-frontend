@@ -4,8 +4,6 @@ import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import { ThemeProvider } from 'styled-components';
 import { HelmetProvider } from 'react-helmet-async';
-import { Wrapper, Logo } from './styles';
-import imgLogo from '@/Images/logo.jpg';
 
 import Menuleft from '@/containers/Menu-left';
 import Header from '@/containers/Header';
@@ -27,9 +25,6 @@ function render() {
           <HelmetProvider>
             <App>
               <Header />
-              <Wrapper>
-                <Logo src={imgLogo} alt="Logo"></Logo>
-              </Wrapper>
               <Menuleft />
               <Routes />
             </App>

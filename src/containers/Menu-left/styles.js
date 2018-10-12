@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   top: 130px;
   float: left;
   width: 256px;
-  height: 640px;
+  height: 100%;
   position: fixed;
   background-color: ${({ theme }) => theme.menuLeft.default};
 `;
