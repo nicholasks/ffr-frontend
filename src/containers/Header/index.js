@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { Wrapper, Valor, Text, Logo, Hr } from './styles';
-import imgLogo from '@/Images/logo.jpg';
+import imgLogo from '@/Images/logo.png';
 
 export default class Header extends Component {
   render() {

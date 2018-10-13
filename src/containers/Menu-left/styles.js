@@ -19,7 +19,7 @@ export const Option = styled(Link)`
   color: ${({ theme }) => theme.menuLeft.white};
   background: ${({ theme }) => theme.menuLeft.default};
 
-  &:hover {
+  &:focus {
     opacity: 1;
   }
 

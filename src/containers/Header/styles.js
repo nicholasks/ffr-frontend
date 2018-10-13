@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   display: flex;
   position: fixed;
   align-items: center;
+  background-color: ${({ theme }) => theme.header.default};
   border-bottom: 1px solid ${({ theme }) => theme.menuLeft.default};
 `;
 
