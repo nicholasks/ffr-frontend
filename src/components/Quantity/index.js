@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button, Wrapper, Number } from './styles';
+import { Wrapper, Select, Option } from './styles';
 
-const Quantity = ({...props, children}) => {
+export default function Quantity ({...props}) {
   return(
     <Wrapper {...props}>
-      <Button>-</Button>
-      <Number>{children}</Number>
-      <Button>+</Button>
+      <Select name="quantidade">
+        <Option value="0">0</Option>
+        <Option value="1">1</Option>
+        <Option value="2">2</Option>
+        <Option value="3">3</Option>
+        <Option value="4">4</Option>
+        <Option value="5">5</Option>
+      </Select>
     </Wrapper>
   );
 }
@@ -16,5 +21,3 @@ const Quantity = ({...props, children}) => {
 Quantity.propTypes = {
   children: PropTypes.number.isRequired,
 }
-
-export default Quantity;

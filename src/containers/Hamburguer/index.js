@@ -7,7 +7,7 @@ import Quantity from '@/components/Quantity';
 import Description from '@/components/Description';
 import { Content, Image } from './styles';
 
-import fotoHamburguer from '../../Images/background.jpg'
+import fotoHamburguer from '@/Images/background.jpg'
 
 export default class Hamburguer extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class Hamburguer extends Component {
             <Image src={fotoHamburguer} alt="Foto Hamburguer" />
             <Description>asuhuhasuhasu</Description>
           </Content>
-          <Quantity>5</Quantity>
+          <Quantity />
         </Wrapper>
       </Container>
     );
