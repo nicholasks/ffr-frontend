@@ -2,7 +2,7 @@ import React from 'react';
 
 const Description = ({...props, children}) => {
   return (
-    <div>{children}</div>
+    <div {...props}>{children}</div>
   );
 }
 

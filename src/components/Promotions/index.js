@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Title, Wrapper, Image, Description, Combo } from './styles';
 
-const Promotions = ({...props, title, foto, children }) => {
+export default function Promotions ({ title, foto, children, ...props }) {
   return(
     <Wrapper {...props}>
       <Title>{title}</Title>
@@ -15,10 +15,7 @@ const Promotions = ({...props, title, foto, children }) => {
   );
 }
 
-export default Promotions;
-
 Promotions.propTypes = {
   title: PropTypes.string.isRequired,
   foto: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
 }
