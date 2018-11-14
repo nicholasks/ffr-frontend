@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 
 import { Product } from '@/api/Product';
 
@@ -6,7 +6,7 @@ import Container from '@/components/Container';
 import Head from '@/components/Head';
 import Wrapper from '@/components/Wrapper';
 import Success from '@/components/Success';
-import { Content, Image, Quantity, Description, SuccessWrapper, SuccessButton } from './styles';
+import { Content, Image, Quantity, SuccessWrapper, SuccessButton, Name, Value, Info, Ingredients, Description } from './styles';
 
 const Range = [0,1,2,3,4,5];
 
@@ -27,6 +27,7 @@ export default class Hamburguer extends PureComponent {
   async componentDidMount() {
     try {
       const { data: { results } } = await Product();
+      console.log(results);
       this.setState({ products: results });
     } catch (error) {
       console.log(error);
@@ -35,23 +36,34 @@ export default class Hamburguer extends PureComponent {
 
   listItens = () => {
     const { products } = this.state;
+
     return (
-    <div>
+    <form onSubmit={this.successCart}>
         {products.map(value => {
         return (
-          <div>
+          <Fragment key={value.price}>
+            <Name>{value.name}</Name>
             <Content onClick={this.selectIngredients}>
               <Image src={value.image} alt="Foto Hamburguer" />
-              <Description>{value.description}</Description>
+              <Info>
+                <Description>{value.description}</Description>
+                {value.ingredients.map(value => {
+                  return (
+                    <Ingredients key={value.name}>{value.name}, </Ingredients>
+                  )
+                })}
+                <Value>Valor: R${value.price}</Value>
+              </Info>
             </Content>
             <Quantity value={Range} />
-          </div>
+            <hr />
+          </Fragment>
         )
       })}
       <SuccessWrapper>
-        <SuccessButton onClick={this.successCart}>Adicionar na comanda</SuccessButton>
+        <SuccessButton type="submit">Adicionar na comanda</SuccessButton>
       </SuccessWrapper>
-    </div>
+    </form>
     );
   };
 
@@ -62,7 +74,7 @@ export default class Hamburguer extends PureComponent {
         <Wrapper>
           <Head title="Hamburguer" />
           {showListItens && this.listItens()}
-          {!showListItens && <Success />}
+          {!showListItens && <Success direction="/" />}
         </Wrapper>
       </Container>
     );

@@ -12,11 +12,17 @@ const Hamburguer = Loadable({
   loading: () => 'Loading...',
 });
 
+const Finalizar = Loadable({
+  loader: () => import('./containers/FinalizarPedido'),
+  loading: () => 'Loading...',
+});
+
 export default function Routes() {
   return (
     <Router>
       <Home path="/" />
       <Hamburguer path="/hamburguer" />
+      <Finalizar path="/finalizarPedido" />
     </Router>
   );
 }

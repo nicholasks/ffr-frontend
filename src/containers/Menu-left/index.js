@@ -9,7 +9,7 @@ export default class MenuLeft extends Component {
         <OptionWrapper>
           <Option to="hamburguer">Hamburguer</Option>
           <Option to="bebidas">Bebidas</Option>
-          <Option to="sorvetes">Sorvetes</Option>
+          <Option to="doces">Doces</Option>
           <Option to="carrinho">Carrinho</Option>
           <Option to="finalizarPedido">Finalizar pedido</Option>
         </OptionWrapper>

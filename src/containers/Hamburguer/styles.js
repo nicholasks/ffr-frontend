@@ -15,17 +15,36 @@ export const SuccessWrapper = styled.div`
   justify-content: center;
 `;
 
+export const Name = styled.p`
+  display: flex;
+  margin-top: 0;
+  font-size: 25px;
+  justify-content: center;
+`;
+
+export const Value = styled.p`
+  font-size: 24px;
+`;
+
+export const Ingredients = styled.span``;
+
+export const Info = styled.div`
+  margin: 20px;
+`;
+
 export const SuccessButton = styled.button`
   border: 0;
   color: #fff;
   padding: 15px;
   outline: none;
+  margin-top: 40px;
   background: #3d558e;
   border-radius: 30px;
 `;
 
 export const Description = styled(DescriptionComponent)`
-  margin: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
 `;
 
 export const Content = styled.div`
