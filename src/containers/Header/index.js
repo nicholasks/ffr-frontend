@@ -7,13 +7,12 @@ import imgLogo from '@/Images/logo.png';
 
 export default class Header extends Component {
   state = {
-    tabs: [("total": 0.0)]
+    tabs: []
   }
 
   async componentDidMount() {
     try {
       const { data: { results } } = await TabTotalPrice(7890);
-      console.log(results);
       this.setState({ tabs: results });
     } catch (error) {
       console.log(error);
@@ -27,7 +26,7 @@ export default class Header extends Component {
         <Logo src={imgLogo} alt="Logo"></Logo>
         <Hr />
         <Text>Valor: </Text>
-        <Valor>R$ {tabs[0].total}</Valor>
+        <Valor>R${tabs[0] && tabs[0].total}</Valor>
       </Wrapper>
     );
   }

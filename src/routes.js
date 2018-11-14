@@ -17,12 +17,18 @@ const Finalizar = Loadable({
   loading: () => 'Loading...',
 });
 
+const Bebidas = Loadable({
+  loader: () => import('./containers/Bebidas'),
+  loading: () => 'Loading...',
+});
+
 export default function Routes() {
   return (
     <Router>
       <Home path="/" />
       <Hamburguer path="/hamburguer" />
       <Finalizar path="/finalizarPedido" />
+      <Bebidas path="/bebidas" />
     </Router>
   );
 }
