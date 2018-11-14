@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+var main_url = "http://fastfoodrequest.zapto.org/api"
+
+
 export function Product () {
-  return axios.get('http://ncorp.redirectme.net/api/product/?category=Hamburgueres');
+  return axios.get(main_url + '/product/?category=Hamburgueres');
 }
