@@ -13,6 +13,9 @@ export const theme = {
     maxWidth: '1024px',
     gutter: '20px',
   },
+  qrcode: {
+    default: '#000',
+  }
 };
 
 injectGlobal`

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { TabTotalPrice } from '@/api/Tab';
 
-
 import { Wrapper, Valor, Text, Logo, Hr } from './styles';
 import imgLogo from '@/Images/logo.png';
 

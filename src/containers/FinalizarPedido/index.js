@@ -6,13 +6,15 @@ import Wrapper from '@/components/Wrapper';
 import Success from '@/components/Success';
 
 export default class FinalizarPedido extends PureComponent {
-  async componentDidMount() {
-    try {
-      // TODO chamada de serviço finalizando pedidos
-    } catch (error) {
-      console.log(error);
-    }
+  constructor(props) {
+    super(props)
+    this.finishOrder();
   }
+
+  finishOrder = () => {
+    //TODO chamada de API para finalizar pedido
+    console.log('entrou');
+  };
 
   render() {
     return (

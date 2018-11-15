@@ -12,13 +12,9 @@ const Range = [0,1,2,3,4,5];
 
 export default class Hamburguer extends PureComponent {
   state = {
-    products: [],
+    food: [],
     showListItens: true,
   }
-
-  selectIngredients = () => {
-    console.log('clicando');
-  };
 
   successCart = () => {
     this.setState({ showListItens: false })
@@ -27,23 +23,22 @@ export default class Hamburguer extends PureComponent {
   async componentDidMount() {
     try {
       const { data: { results } } = await Product();
-      console.log(results);
-      this.setState({ products: results });
+      this.setState({ food: results });
     } catch (error) {
       console.log(error);
     }
   }
 
   listItens = () => {
-    const { products } = this.state;
+    const { food } = this.state;
 
     return (
     <form onSubmit={this.successCart}>
-        {products.map(value => {
+        {food.map(value => {
         return (
           <Fragment key={value.price}>
             <Name>{value.name}</Name>
-            <Content onClick={this.selectIngredients}>
+            <Content>
               <Image src={value.image} alt="Foto Hamburguer" />
               <Info>
                 <Description>{value.description}</Description>
@@ -74,7 +69,7 @@ export default class Hamburguer extends PureComponent {
         <Wrapper>
           <Head title="Hamburguer" />
           {showListItens && this.listItens()}
-          {!showListItens && <Success direction="/" />}
+          {!showListItens && <Success direction="/home" />}
         </Wrapper>
       </Container>
     );
