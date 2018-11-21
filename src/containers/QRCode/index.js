@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import QrReader from 'react-qr-scanner';
 
-import { Wrapper } from './styles';
+import { Wrapper, BorderLeft, BorderRight } from './styles';
 
 export default class QRCode extends PureComponent {
   constructor(props) {
@@ -25,18 +25,16 @@ export default class QRCode extends PureComponent {
   render() {
     const { delay, result } = this.state;
 
-    const previewStyle = {
-      height: 240,
-      width: 320,
-    }
-
     return (
       <Wrapper>
+        <BorderLeft />
         <QrReader
           delay={delay}
-          style={previewStyle}
+          style={{ width: 450 }}
           onScan={this.handleScan}
-          onError={this.handleError} />
+          onError={this.handleError}
+        />
+        <BorderRight />
       </Wrapper>
     );
   }

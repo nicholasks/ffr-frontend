@@ -4,8 +4,8 @@ import { Link } from '@reach/router';
 
 export const Wrapper = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
-  min-height: 500px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
