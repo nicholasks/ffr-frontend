@@ -1,5 +1,8 @@
 import React, { PureComponent } from 'react';
 import QrReader from 'react-qr-scanner';
+import { navigate  } from "@reach/router"
+
+import { QRCodeScanner } from '@/api/QRCode'
 
 import { Wrapper, BorderLeft, BorderRight } from './styles';
 
@@ -7,15 +10,20 @@ export default class QRCode extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      delay: 100,
-      result: '',
+      delay: 1200,
     }
   }
 
-  handleScan = data => {
-    this.setState({
-      result: data,
-    })
+  handleScan = async value => {
+    if (!value) return null;
+
+    try {
+      const { data : { count }} = await QRCodeScanner(value);
+
+      if (count === 1) navigate ('/home');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   handleError = err => {
@@ -23,7 +31,7 @@ export default class QRCode extends PureComponent {
   };
 
   render() {
-    const { delay, result } = this.state;
+    const { delay } = this.state;
 
     return (
       <Wrapper>
