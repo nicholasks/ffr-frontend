@@ -24,7 +24,7 @@ export default class Header extends Component {
       <Wrapper>
         <Logo src={imgLogo} alt="Logo"></Logo>
         <Hr />
-        <Text>Valor: </Text>
+        <Text>Valor total: </Text>
         <Valor>R${tabs[0] && tabs[0].total}</Valor>
       </Wrapper>
     );

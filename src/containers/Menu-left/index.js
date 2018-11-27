@@ -7,6 +7,7 @@ export default class MenuLeft extends Component {
     return(
       <Wrapper>
         <OptionWrapper>
+          <Option to="home">Promoções</Option>
           <Option to="hamburguer">Hamburguer</Option>
           <Option to="bebidas">Bebidas</Option>
           <Option to="sobremesa">Sobremesa</Option>

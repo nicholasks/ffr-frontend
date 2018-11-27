@@ -5,6 +5,7 @@ export const Wrapper = styled(WrapperComponent)`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0,0,0,0.5);
 `;
 
 export const BorderLeft = styled.div`

@@ -11,7 +11,7 @@ export const theme = {
   },
   container: {
     maxWidth: '1024px',
-    gutter: '20px',
+    gutter: '40px',
   },
   qrcode: {
     default: '#000',
