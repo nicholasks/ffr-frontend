@@ -14,8 +14,7 @@ export const Title = styled.span`
 `;
 
 export const Image = styled.img`
-  width: 200px;
-  height: 170px;
+  height: 172px;
   margin: 10px 0 0 14px;
 `;
 

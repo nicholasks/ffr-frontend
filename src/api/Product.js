@@ -10,3 +10,7 @@ export function Product () {
 export function Drinks() {
   return axios.get(main_url + '/product/?category=Bebidas');
 }
+
+export function Dessert() {
+  return axios.get(main_url + '/product/?category=Sobremesas');
+}

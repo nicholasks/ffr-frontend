@@ -10,7 +10,7 @@ export default class QRCode extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      delay: 1200,
+      delay: 500,
     }
   }
 

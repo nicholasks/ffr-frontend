@@ -27,6 +27,11 @@ const Bebidas = Loadable({
   loading: () => 'Loading...',
 });
 
+const Sobremesa = Loadable({
+  loader: () => import('./containers/Sobremesa'),
+  loading: () => 'Loading...',
+});
+
 export default function Routes() {
   return (
     <Router>
@@ -34,6 +39,7 @@ export default function Routes() {
       <Hamburguer path="/hamburguer" />
       <Finalizar path="/finalizarPedido" />
       <Bebidas path="/bebidas" />
+      <Sobremesa path="/sobremesa" />
       <QRCode path="/" />
     </Router>
   );
