@@ -2,7 +2,7 @@ FROM node:10.12.0
 
 WORKDIR /srv
 
-COPY . .
+COPY ./.storybook/ ./storybook/
 
 RUN npm install
 
